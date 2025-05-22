@@ -1,0 +1,65 @@
+.search-item {
+  --min-height: 60px;
+  margin-bottom: 16px;
+
+  ion-input {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  ion-label {
+    font-weight: 600;
+  }
+}
+
+.buscar-btn {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+}
+
+.result-list {
+  ion-card.personaje-card {
+    margin-bottom: 16px;
+    border-radius: 14px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+    }
+
+    ion-item {
+      --min-height: 80px;
+
+      ion-thumbnail.thumb {
+        border-radius: 12px;
+        overflow: hidden;
+        width: 70px;
+        height: 70px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      ion-label {
+        h2 {
+          margin: 0 0 4px 0;
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+        p {
+          margin: 0;
+          color: var(--ion-color-medium);
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
