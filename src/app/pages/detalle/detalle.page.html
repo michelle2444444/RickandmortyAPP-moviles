@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{ personaje?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img 
+    [src]="personaje?.image"
+    style="max-width: 300px; display: block; margin: 0 auto; border-radius: 16px;"
+  ></ion-img>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ personaje?.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Status:</strong> {{ personaje?.status }}</p>
+      <p><strong>Species:</strong> {{ personaje?.species }}</p>
+      <p><strong>Gender:</strong> {{ personaje?.gender }}</p>
+      <p><strong>Origin:</strong> {{ personaje?.origin?.name }}</p>
+
+      <ion-item>
+        <ion-label position="floating">Comentario</ion-label>
+        <ion-textarea [(ngModel)]="comentario"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" color="tertiary" (click)="guardarEnFirebase()">Guardar en Firebase</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
